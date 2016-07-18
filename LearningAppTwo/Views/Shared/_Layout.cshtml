@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Header -->
+    <div class="header-wrapper">
+        <div class="container">
+            <!-- Logo and Navigation -->
+            <div class="row">
+                <!-- Logo -->
+                <div class="col-lg-8"></div>
+                <!-- Navigation -->
+                <div class="col-lg-4 menu"></div>
+            </div>
+            <!-- Slidder Content -->
+            <div class="row">
+                <div class="col-lg-8"></div>
+                <!-- Content -->
+                <div class="col-lg-4 slidder-content">
+                    <!-- Rows Controlling slidder-content content -->
+                    <!-- content headers -->
+                    <div class="row content-row-1">
+                        <div class="col-lg-12">
+                            <h2>Welcome to Galactic</h2>
+                            <h1>SpaceTraders</h1>
+                        </div>
+                    </div>
+                    <!-- content content -->
+                    <div class="row content-row-2">
+                        <div class="col-lg-12">
+                            <p>Check status, browse, and upgrade your spaceship!</p>
+                        </div>
+                    </div>
+                    <!-- content call-to-actions -->
+                    <div class="row content-row-3">
+                        <div class="col-lg-2"></div>
+                        <!-- Login button -->
+                        <a href="#" class="col-lg-2 login-button">
+                            <div>
+                                Login
+                            </div>
+                        </a>
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-2"></div>
+                        <!-- Shop button -->
+                        <a href="#" class="col-lg-2 shop-button">
+                            <div>
+                                Shop
+                            </div>
+                        </a>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody();
+
+    <!-- Footer -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

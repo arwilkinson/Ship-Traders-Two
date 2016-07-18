@@ -1,0 +1,54 @@
+﻿@using LearningAppTwo.Models
+<!-- Body Content -->
+<div class="body-wrapper">
+    <span class="container">
+        <div class="row">
+            <!-- Blog Section -->
+            <div class="col-lg-8 blog-wrapper">
+                <!-- Blog Post Fillers; Will be filling with PHP -->
+                @{
+                    DataBase db = new DataBase();
+                    List<BlogPost> posts = db.GetBlogs();
+
+                    foreach (BlogPost post in posts)
+                    {
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h3>@post.BlogPostTitle</h3>
+                                <p>@post.BlogPostContent</p>
+                            </div>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>Ad 1</h3>
+                            <p>This is some ad text.</p>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Ad Section -->
+            <div class="col-lg-4 sidebar-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Ad 1</h3>
+                        <p>This is some ad text.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Ad 1</h3>
+                        <p>This is some ad text.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Ad 1</h3>
+                        <p>This is some ad text.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
